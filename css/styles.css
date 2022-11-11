@@ -237,7 +237,7 @@ p {
   transition: opacity 250ms var(--timing-function);
 }
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.8);
   transition: transform 250ms var(--timing-function);
 }
 .modal {
@@ -808,6 +808,10 @@ p {
   transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
 }
 .portfolio-link:hover .hover-text {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.portfolio-link:focus .hover-text {
   transform: translateY(0%);
   opacity: 1;
 }
