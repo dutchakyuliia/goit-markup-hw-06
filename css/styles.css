@@ -246,14 +246,12 @@ p {
   left: 50%;
 
   width: 528px;
-  height: 581px;
   background-color: var(--backgroud-color);
 
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
 }
-
 .close-modal {
   position: absolute;
   top: 8px;
@@ -264,13 +262,183 @@ p {
   border-radius: 50%;
   cursor: pointer;
   background-color: var(--backgroud-color);
+  color: #000000;
 }
-
+.close-modal:focus,
+.close-modal:hover {
+  color: var(--accent-color-blue);
+  transition: color 250ms var(--timing-function);
+}
 .icon-modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  fill: currentColor;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 40px;
+}
+.modal-form label {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  padding-top: 2px;
+  margin-bottom: 12px;
+}
+.modal-form .form-field {
+  margin-bottom: 10px;
+}
+.modal-form .form-field:last-child {
+  margin-bottom: 20px;
+}
+.form-field label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+.form-field input {
+  width: 100%;
+  height: 40px;
+  padding: 11px 42px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+.form-field:focus-within input {
+  outline: 1px solid var(--accent-color-blue);
+  border-radius: 4px;
+  border: none;
+  transition: outline 250ms var(--timing-function);
+}
+.form-field {
+  position: relative;
+}
+.icon-modal-field {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 12px;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+.form-field:focus-within .icon-modal-field {
+  fill: var(--accent-color-blue);
+  transition: fill 250ms var(--timing-function);
+}
+.form-field.textarea {
+  margin-bottom: 20px;
+}
+.form-field textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.form-field:focus-within textarea {
+  outline: 1px solid var(--accent-color-blue);
+  border-radius: 4px;
+  border: none;
+  transition: outline 250ms var(--timing-function);
+}
+.form-field textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.icon-modal-check {
+  fill: currentColor;
+}
+
+.checkbox-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 11px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.checkbox:checked + .icon-check-box {
+  background-color: var(--accent-color-blue);
+  border: 2px solid var(--accent-color-blue);
+  transition: background-color 250ms var(--timing-function);
+}
+
+.icon-check-box {
+  position: absolute;
+  left: -10px;
+  top: 3px;
+  display: flex;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid #000000;
+  color: var(--accent-color-white);
+  background-color: var(--accent-color-white);
+}
+.terms-contract {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--accent-color-blue);
+}
+
+.checkbox-wrap .checkbox-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 0;
+}
+.modal-submit {
+  width: 200px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--accent-color-white);
+  background-color: var(--accent-color-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  margin: 0 auto;
+  padding: 10px 52px;
+  cursor: pointer;
+}
+.modal-submit:hover,
+.modal-submit:focus {
+  background-color: #188ce8;
+  transition: background-color 250ms var(--timing-function);
 }
 /* особливості */
 .features {
@@ -383,8 +551,7 @@ p {
   background-color: var(--accent-color-blue);
   color: var(--accent-color-white);
   border-radius: 50%;
-  transition: background-color 250ms var(--timing-function),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .team-icon {
   fill: currentColor;
@@ -413,7 +580,7 @@ p {
 .clients-link:focus {
   color: var(--accent-color-blue);
   border: 1px solid var(--accent-color-blue);
-  transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
 }
 .clients-icon {
   fill: currentColor;
@@ -477,6 +644,9 @@ p {
   text-transform: uppercase;
   color: var(--accent-color-white);
 }
+.footer-soc {
+  margin-right: 93px;
+}
 .footer-soc-list {
   display: flex;
 }
@@ -497,6 +667,68 @@ p {
 }
 .footer-icon {
   fill: currentColor;
+}
+
+.subscribe {
+}
+.subscribe-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent-color-white);
+}
+.subscribe-wrap {
+  display: flex;
+}
+.subscribe-btn {
+  display: flex;
+  gap: 10px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--accent-color-white);
+  background-color: var(--accent-color-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid var(--accent-color-blue);
+  padding: 10px 28px;
+  cursor: pointer;
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: #188ce8;
+  transition: background-color 250ms var(--timing-function);
+}
+.subscribe-wrap input {
+  width: 358px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscribe-wrap input::placeholder {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscribe-wrap:focus-within input {
+  outline: 1px solid #2196f3;
+  transition: outline 250ms var(--timing-function);
 }
 /*! PORTFOLIO */
 
