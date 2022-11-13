@@ -111,7 +111,7 @@ p {
 
 .nav-link.current::after {
   position: absolute;
-  bottom: -4px;
+  bottom: -1px;
   left: 0;
   content: '';
   height: 4px;
@@ -127,19 +127,12 @@ p {
   color: var(--accent-color-blue);
   transition: color 250ms var(--timing-function);
 }
-.header-icon-box {
-  color: var(--primary-text-color);
-  padding: 34px 0;
-  margin-right: 10px;
-}
+
 .header-icon {
   fill: currentColor;
+  margin-right: 10px;
 }
-.header-icon-box:hover,
-.header-icon-box:focus {
-  color: var(--accent-color-blue);
-  transition: color 250ms var(--timing-function);
-}
+
 .header-address {
   display: flex;
   align-items: center;
@@ -150,6 +143,8 @@ p {
 }
 .header-mail,
 .header-tel {
+  display: flex;
+  align-items: center;
   padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
@@ -445,9 +440,11 @@ p {
   padding-bottom: 0;
 }
 .features-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
-  padding: 25px 0;
   text-align: center;
   margin-bottom: 30px;
   background: #f5f4fa;
@@ -567,11 +564,12 @@ p {
   display: flex;
 }
 .clients-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 170px;
   height: 92px;
-  padding: 16px 0;
   color: var(--icon-fill);
   border: 1px solid var(--icon-fill);
   border-radius: 4px;
