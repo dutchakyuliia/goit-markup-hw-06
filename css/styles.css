@@ -107,8 +107,13 @@ p {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   text-decoration: none;
+   transition: color 250ms var(--timing-function);
 }
-
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color-blue);
+ 
+}
 .nav-link.current::after {
   position: absolute;
   bottom: -1px;
@@ -122,11 +127,7 @@ p {
 .current {
   color: var(--accent-color-blue);
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-color-blue);
-  transition: color 250ms var(--timing-function);
-}
+
 
 .header-icon {
   fill: currentColor;
@@ -152,13 +153,14 @@ p {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   text-decoration: none;
+  transition: color 250ms var(--timing-function);
 }
 .header-mail:hover,
 .header-mail:focus,
 .header-tel:hover,
 .header-tel:focus {
   color: var(--accent-color-blue);
-  transition: color 250ms var(--timing-function);
+  
 }
 
 /*! main */
@@ -207,12 +209,13 @@ p {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function);
 }
 
 .button:hover,
 .button:focus {
   background-color: #188ce8;
-  transition: background-color 250ms var(--timing-function);
+  
 }
 
 /* modal */
@@ -258,11 +261,12 @@ p {
   cursor: pointer;
   background-color: var(--backgroud-color);
   color: #000000;
+  transition: color 250ms var(--timing-function);
 }
 .btn-close-modal:focus,
 .btn-close-modal:hover {
   color: var(--accent-color-blue);
-  transition: color 250ms var(--timing-function);
+  
 }
 .icon-modal {
   position: absolute;
@@ -315,12 +319,11 @@ p {
   padding: 11px 42px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+   transition: outline 250ms var(--timing-function);
 }
 .form-field:focus-within input {
   outline: 1px solid var(--accent-color-blue);
-  border-radius: 4px;
-  border: none;
-  transition: outline 250ms var(--timing-function);
+ 
 }
 .form-field {
   position: relative;
@@ -333,9 +336,11 @@ p {
   margin-top: 11px;
   margin-bottom: 11px;
 }
+.form-field .icon-modal-field{
+   transition: fill 250ms var(--timing-function);
+}
 .form-field:focus-within .icon-modal-field {
   fill: var(--accent-color-blue);
-  transition: fill 250ms var(--timing-function);
 }
 .form-field.textarea {
   margin-bottom: 20px;
@@ -348,11 +353,13 @@ p {
   border-radius: 4px;
   padding: 12px 16px;
 }
+.form-field textarea {
+transition: outline 250ms var(--timing-function);
+}
+
 .form-field:focus-within textarea {
   outline: 1px solid var(--accent-color-blue);
-  border-radius: 4px;
   border: none;
-  transition: outline 250ms var(--timing-function);
 }
 .form-field textarea::placeholder {
   font-weight: 400;
@@ -429,11 +436,11 @@ p {
   margin: 0 auto;
   padding: 10px 52px;
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function);
 }
 .modal-submit:hover,
 .modal-submit:focus {
   background-color: #188ce8;
-  transition: background-color 250ms var(--timing-function);
 }
 /* особливості */
 .features {
@@ -542,13 +549,13 @@ p {
   height: 44px;
   padding: 12px 0;
   text-align: center;
+  border-radius: 50%;
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .team-icon-box:focus,
 .team-icon-box:hover {
   background-color: var(--accent-color-blue);
   color: var(--accent-color-white);
-  border-radius: 50%;
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .team-icon {
   fill: currentColor;
@@ -573,12 +580,13 @@ p {
   color: var(--icon-fill);
   border: 1px solid var(--icon-fill);
   border-radius: 4px;
+  transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
 }
 .clients-link:hover,
 .clients-link:focus {
   color: var(--accent-color-blue);
   border: 1px solid var(--accent-color-blue);
-  transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
+  
 }
 .clients-icon {
   fill: currentColor;
@@ -657,11 +665,12 @@ p {
   border-radius: 50%;
   color: var(--accent-color-white);
   background: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--timing-function);
 }
 .footer-icon-box:focus,
 .footer-icon-box:hover {
   background-color: var(--accent-color-blue);
-  transition: background-color 250ms var(--timing-function);
+  
 }
 .footer-icon {
   fill: currentColor;
@@ -724,9 +733,12 @@ p {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
+.subscribe-wrap input {
+  transition: outline 250ms var(--timing-function);
+}
 .subscribe-wrap:focus-within input {
   outline: 1px solid #2196f3;
-  transition: outline 250ms var(--timing-function);
+  
 }
 /*! PORTFOLIO */
 
@@ -753,6 +765,8 @@ p {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 .button-portfolio:hover,
 .button-portfolio:focus {
@@ -760,10 +774,7 @@ p {
   background: var(--accent-color-blue);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  border: none;
-  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function),
-    box-shadow 250ms var(--timing-function);
+  
 }
 /* приклади робіт */
 
@@ -777,12 +788,13 @@ p {
 .card-project {
   margin-left: 30px;
   margin-top: 30px;
+  transition: box-shadow 250ms var(--timing-function);
 }
 .card-project:hover,
 .card-projecr:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 250ms var(--timing-function);
+  
 }
 
 .box-overlay {
@@ -803,8 +815,15 @@ p {
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
   transform: translateY(100%);
+}
+.portfolio-link .hover-text {
   transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
 }
+.portfolio-link {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
 .portfolio-link:hover .hover-text {
   transform: translateY(0%);
   opacity: 1;
@@ -828,8 +847,4 @@ p {
 .project {
   font-size: 16px;
   line-height: 1.88;
-}
-.portfolio-link {
-  color: var(--primary-text-color);
-  text-decoration: none;
 }
